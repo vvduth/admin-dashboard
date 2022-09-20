@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { FC, PropsWithChildren } from 'react'
 
+interface Props{
+  bgColor: any, 
+  color: any, 
+  size?: any, 
+  text: any,
+  borderRadius: any;  
+}
 
-
-const Button = () => {
+const Button:FC<Props> = ({bgColor, color, size, text, borderRadius}) => {
   return (
-    <div>
-      
-    </div>
+    <button
+      type='button' 
+      className={`text-${size} p-3 hover:drop-shadow-xl`}
+      style={{backgroundColor: bgColor, color, borderRadius}}
+    >
+      {text}
+    </button>
   )
 }
 
