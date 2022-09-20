@@ -14,7 +14,7 @@ import {
   SparklineAreaData,
   ecomPieChartData,
 } from "../data/dummy";
-import { useStateContext } from "../contexts/ContextProvider";
+import { AppContextInterface, useStateContext } from "../contexts/ContextProvider";
 import product9 from "../data/product9.jpg";
 
 export interface EarningsDataItem {
@@ -28,11 +28,12 @@ export interface EarningsDataItem {
 }
 
 const Ecommerce = () => {
+  const {currentColor}  = useStateContext() as AppContextInterface
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
         <div
-          className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg 
+          className="bg-white dark:text-gray-800 dark:bg-secondary-dark-bg 
                 h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 
                 bg-hero-pattern bg-no-repeat bg-cover bg-center"
         >
@@ -45,7 +46,7 @@ const Ecommerce = () => {
           <div className="mt-6">
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
               size="md"
@@ -83,7 +84,7 @@ const Ecommerce = () => {
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-gray-600 dark:text-white hover:drop-shadow-xl">
                 <span>
                   <GoPrimitiveDot />
                 </span>
@@ -122,13 +123,13 @@ const Ecommerce = () => {
                   height="80px"
                   width="250px"
                   data={SparklineAreaData}
-                  color="blue"
+                  color={currentColor}
                 />
               </div>
               <div className="mt-10">
                 <Button 
                   color="white"
-                  bgColor="blue" 
+                  bgColor={currentColor}
                   text="Download report" 
                   borderRadius="10px"
                 />

@@ -14,6 +14,7 @@ import {
 } from "../contexts/ContextProvider";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }: any) => {
+  
   return (
     <TooltipComponent content={title} position="BottomCenter">
       <button
@@ -41,6 +42,7 @@ const NavBar = () => {
     handleClick,
     screenSize,
     setScreenSize,
+    currentColor
   } = useStateContext() as AppContextInterface;
 
   useEffect(() => {
@@ -65,7 +67,7 @@ const NavBar = () => {
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevMenu: boolean) => !prevMenu)}
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu />}
       />
 
@@ -73,21 +75,21 @@ const NavBar = () => {
         <NavButton
           title="Menu"
           customFunc={() => handleClick("cart")}
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
           customFunc={() => handleClick("chat")}
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title="Notification"
           dotColor="rgb(254, 201, 15)"
           customFunc={() => handleClick("notification")}
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
         />
 
