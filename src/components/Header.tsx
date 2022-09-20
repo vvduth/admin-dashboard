@@ -1,9 +1,20 @@
-import React from 'react'
+import React,{FC} from 'react'
 
-const Header = () => {
+interface HeaderPropsInterface {
+  category: any, 
+  title: string, 
+}
+const Header: FC<HeaderPropsInterface> = ({category, title}) => {
   return (
-    <div>
-      Header
+    <div
+      className='mb-10'
+    >
+      <p className='text-gray-400'>
+        {category}
+      </p>
+      <p className='text-3xl font-extrabold tracking-tight text-slate-900'>
+        {title}
+      </p>
     </div>
   )
 }

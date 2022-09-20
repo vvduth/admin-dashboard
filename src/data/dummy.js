@@ -1485,20 +1485,20 @@ export const customersData = [
 export const employeesData = [
   {
     EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
+    Name: 'Duc Thai',
+    Title: 'CEO & CTO',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Finland',
     ReportsTo: 'Carson',
     EmployeeImage:
     avatar3,
   },
   {
     EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
+    Name: 'Vasco',
+    Title: 'Tech Head',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Finland',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar3,
@@ -1508,25 +1508,25 @@ export const employeesData = [
     Name: 'Iulia Albu',
     Title: 'HR',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Finland',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar4,
   },
   {
     EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
+    Name: 'Son',
+    Title: 'Mascot',
     HireDate: '01/02/2021',
-    Country: 'USA',
+    Country: 'Finlad',
     ReportsTo: 'Carson',
     EmployeeImage:
       avatar2,
   },
   {
     EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
+    Name: 'Thong',
+    Title: 'Trainee',
     HireDate: '01/02/2021',
     Country: 'USA',
     ReportsTo: 'Carson',
